@@ -8,6 +8,7 @@ public class WaypointSystem : MonoBehaviour
     public int interval = 1;
     public GameObject waypoint;
     public Vector3 spacing = new Vector3(1f, 1f, 1f);
+    bool startWaypoints = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,21 @@ public class WaypointSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >= nextTime)
-        {
-            Instantiate(waypoint);
-            waypoint.transform.position = this.transform.position - spacing;
 
-            nextTime += interval;
+        if (startWaypoints)
+        {
+            if (Time.time >= nextTime)
+            {
+                Instantiate(waypoint);
+                waypoint.transform.position = this.transform.position - spacing;
+
+                nextTime += interval;
+            }
         }
+    }
+
+    public void startWay()
+    {
+        startWaypoints = !startWaypoints;
     }
 }
