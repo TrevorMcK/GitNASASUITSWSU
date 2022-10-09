@@ -21,6 +21,8 @@ public class HUD : MonoBehaviour
     public GameObject WarningPower;
     public float oxygenwartime = 0;
     public float powerwartime = 0;
+    bool warningCalledOx1 = false;
+    bool warningCalledOx2 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -58,20 +60,22 @@ public class HUD : MonoBehaviour
             WarningOxygen.SetActive(false);
         }
         else WarningOxygen.SetActive(false);
-        if (power < 25)
+        if (power < 25 && !warningCalledOx1)
         {
             WarningPower.SetActive(true);
             powerwartime = Time.time;
+            warningCalledOx1 = true;
         }
         else if(Time.time>=powerwartime + 5){
             WarningPower.SetActive(false);
         }
         else WarningPower.SetActive(false);
-        if(oxygen < 10)
+        if(oxygen < 10 && !warningCalledOx2)
         {
             WarningOxygen.SetActive(true);
             WarningOxygen.GetComponent<TextMeshProUGUI>().SetText("Warning Oxygen levels critical!!!! Return to base");
             oxygenwartime = Time.time;
+            warningCalledOx2 = true;
         }
         if(power< 10)
         {
