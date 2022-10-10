@@ -190,8 +190,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278255392
+  m_fontColor: {r: 0.12457347, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3020,8 +3020,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278255392
+  m_fontColor: {r: 0.12457347, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3150,9 +3150,11 @@ MonoBehaviour:
   TemperatureInterval: 20
   OxygenTxt: {fileID: 1170074}
   TemperatureTxt: {fileID: 978429026}
-  Power_LevelTxt: {fileID: 1349050671}
+  PowerTxt: {fileID: 1349050671}
   WarningOxygen: {fileID: 1158270375}
   WarningPower: {fileID: 705731920}
+  oxygenwartime: 0
+  powerwartime: 0
 --- !u!114 &1377992242
 MonoBehaviour:
   m_ObjectHideFlags: 0

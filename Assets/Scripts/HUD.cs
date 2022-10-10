@@ -12,11 +12,11 @@ public class HUD : MonoBehaviour
     float oxygen = 100;
     float power = 100;
     public int Oxygen_Interval = 1;
-    public int Power_Level_Interval = 5;
+    public int Power_Level_Interval = 1;
     public int TemperatureInterval = 20;
     public GameObject OxygenTxt;
     public GameObject TemperatureTxt;
-    public GameObject Power_LevelTxt;
+    public GameObject PowerTxt;
     public GameObject WarningOxygen;
     public GameObject WarningPower;
     public float oxygenwartime = 0;
@@ -42,7 +42,7 @@ public class HUD : MonoBehaviour
         if(Time.time >= nextTimePowerLevel && power>=0)
         {
             power--;
-            Power_LevelTxt.GetComponent<TextMeshProUGUI>().SetText("Power Level: " + power + "%");
+            PowerTxt.GetComponent<TextMeshProUGUI>().SetText("Power Level: " + power + "%");
             nextTimePowerLevel += Power_Level_Interval;
         }
         if(Time.time >= nextTimeTemperature)
@@ -50,38 +50,55 @@ public class HUD : MonoBehaviour
             TemperatureTxt.GetComponent<TextMeshProUGUI>().SetText("Temperature: " +Mathf.Round( Random.Range(-272.0f, -250.0f)) + "C");
             nextTimeTemperature += TemperatureInterval;
         }
-        if (oxygen < 25)
+        if(oxygen == 75)
+        {
+            OxygenTxt.GetComponent<TextMeshProUGUI>().color = Color.yellow;
+        }
+        
+        if (oxygen == 35)
+        {
+            StartCoroutine(showWarningOx(3.0f));
+            oxygenwartime = Time.time;
+            OxygenTxt.GetComponent<TextMeshProUGUI>().color = Color.red;
+        }
+
+
+        if (power == 75)
+        {
+            PowerTxt.GetComponent<TextMeshProUGUI>().color = Color.yellow;
+        }
+
+        //else WarningOxygen.SetActive(false);
+        if (power == 35)
+        {
+            StartCoroutine(showWarningPw(3.0f));
+            powerwartime = Time.time;
+            PowerTxt.GetComponent<TextMeshProUGUI>().color = Color.red;
+        }
+        
+        //else WarningPower.SetActive(false);
+        if(oxygen == 10)
+        {
+            StartCoroutine(showWarningOx(5.0f));
+            WarningOxygen.GetComponent<TextMeshProUGUI>().SetText("Warning Oxygen levels critical!!!! Return to base");
+        }
+        if(power == 10)
+        {
+            StartCoroutine(showWarningPw(5.0f));
+            WarningPower.GetComponent<TextMeshProUGUI>().SetText("Warning Power levels critical!!!! Return to base");
+        }
+        
+        IEnumerator showWarningOx(float delay)
         {
             WarningOxygen.SetActive(true);
-            oxygenwartime = Time.time;
-        }
-        else if (Time.time>=oxygenwartime +5)
-        {
+            yield return new WaitForSeconds(delay);
             WarningOxygen.SetActive(false);
         }
-        else WarningOxygen.SetActive(false);
-        if (power < 25 && !warningCalledOx1)
+        IEnumerator showWarningPw(float delay)
         {
             WarningPower.SetActive(true);
-            powerwartime = Time.time;
-            warningCalledOx1 = true;
-        }
-        else if(Time.time>=powerwartime + 5){
+            yield return new WaitForSeconds(delay);
             WarningPower.SetActive(false);
-        }
-        else WarningPower.SetActive(false);
-        if(oxygen < 10 && !warningCalledOx2)
-        {
-            WarningOxygen.SetActive(true);
-            WarningOxygen.GetComponent<TextMeshProUGUI>().SetText("Warning Oxygen levels critical!!!! Return to base");
-            oxygenwartime = Time.time;
-            warningCalledOx2 = true;
-        }
-        if(power< 10)
-        {
-            WarningPower.SetActive(true);
-            WarningPower.GetComponent<TextMeshProUGUI>().SetText("Warning Power levels critical!!!! Return to base");
-            powerwartime = Time.time;
         }
     }
     
