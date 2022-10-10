@@ -19,6 +19,7 @@ public class HUD : MonoBehaviour
     public GameObject PowerTxt;
     public GameObject WarningOxygen;
     public GameObject WarningPower;
+    public GameObject WelcomeMessage;
     public float oxygenwartime = 0;
     public float powerwartime = 0;
     bool warningCalledOx1 = false;
@@ -27,7 +28,13 @@ public class HUD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(showWelcomeMessage(3.0f));
+        IEnumerator showWelcomeMessage(float delay)
+        {
+            WelcomeMessage.SetActive(true);
+            yield return new WaitForSeconds(delay);
+            WelcomeMessage.SetActive(false);
+        }
     }
 
     // Update is called once per frame
