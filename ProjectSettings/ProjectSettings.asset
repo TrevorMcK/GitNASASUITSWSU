@@ -158,9 +158,7 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: e41b604601aca4941ba6b0a9f493038a, type: 2}
-  - {fileID: -2017388437436458452, guid: 95ebb376a9bfa974aa970a1465d69614, type: 2}
-  - {fileID: -5083174602292102058, guid: bd7480eb87d6c104ab5741aa0501de1e, type: 2}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -277,15 +275,15 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/zir12/.android/debug.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: '{inproject}: android/user.keystore'
+  AndroidKeyaliasName: password
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 0
+  androidUseCustomKeystore: 1
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -979,7 +977,7 @@ PlayerSettings:
   luminVersion:
     m_VersionCode: 1
     m_VersionName: 
-  apiCompatibilityLevel: 3
+  apiCompatibilityLevel: 6
   activeInputHandler: 2
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0

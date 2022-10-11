@@ -6,7 +6,7 @@ using TMPro;
 public class HUD : MonoBehaviour
 {
 
-    float nextTimeTemperature = 0;
+    
     float nextTimePowerLevel = 0;
     float nextTimeOxygenInterval = 0;
     float Mission1DisplayTime = 0;
@@ -14,10 +14,10 @@ public class HUD : MonoBehaviour
     float power = 100;
     public int Oxygen_Interval = 1;
     public int Power_Level_Interval = 1;
-    public int TemperatureInterval = 20;
+    
     public int Mission1Interval = 1;
     public GameObject OxygenTxt;
-    public GameObject TemperatureTxt;
+    
     public GameObject PowerTxt;
     public GameObject WarningOxygen;
     public GameObject WarningPower;
@@ -25,8 +25,6 @@ public class HUD : MonoBehaviour
     public GameObject Mission1;
     public float oxygenwartime = 0;
     public float powerwartime = 0;
-    bool warningCalledOx1 = false;
-    bool warningCalledOx2 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -58,11 +56,7 @@ public class HUD : MonoBehaviour
             PowerTxt.GetComponent<TextMeshProUGUI>().SetText("Power Level: " + power + "%");
             nextTimePowerLevel += Power_Level_Interval;
         }
-        if (Time.time >= nextTimeTemperature)
-        {
-            TemperatureTxt.GetComponent<TextMeshProUGUI>().SetText("Temperature: " + Mathf.Round(Random.Range(-272.0f, -250.0f)) + "C");
-            nextTimeTemperature += TemperatureInterval;
-        }
+        
         if (oxygen == 75)
         {
             OxygenTxt.GetComponent<TextMeshProUGUI>().color = Color.yellow;
