@@ -1140,7 +1140,8 @@ GameObject:
   - component: {fileID: 327902591}
   - component: {fileID: 327902590}
   - component: {fileID: 327902589}
-  m_Layer: 0
+  - component: {fileID: 327902593}
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1226,6 +1227,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &327902593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327902588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4233079c121f47709403b0bd2f99a156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceCursorDistance: 0.02
+  useUnscaledTime: 1
+  positionLerpTime: 0.01
+  scaleLerpTime: 0.01
+  rotationLerpTime: 0.01
+  lookRotationBlend: 0.5
+  resizeCursorWithDistance: 0
+  cursorAngularSize: 50
+  PrimaryCursorVisual: {fileID: 0}
+  SourceDownIds: 
+  defaultCursorDistance: 2
+  cursorStateData: []
+  cursorContextData: []
+  inputEnabledParameter:
+    parameterType: 0
+    defaultInt: 0
+    defaultFloat: 0
+    defaultBool: 0
+    name: 
+  inputDisabledParameter:
+    parameterType: 0
+    defaultInt: 0
+    defaultFloat: 0
+    defaultBool: 0
+    name: 
+  cursorAnimator: {fileID: 0}
+  arrowTransform: {fileID: 0}
 --- !u!1 &395392614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,7 +2404,7 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -2406,7 +2446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.0764, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2671,7 +2711,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999852047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.0764, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3538,7 +3578,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 963194227}
-  m_PlaneDistance: 0.12
+  m_PlaneDistance: 5
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -3547,7 +3587,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!1 &1449483543
 GameObject:
@@ -6692,7 +6732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &221806289394689460
 GameObject:
   m_ObjectHideFlags: 0
@@ -9348,7 +9388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!33 &3126573609298322292
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9781,7 +9821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3513795410766679963
 Transform:
   m_ObjectHideFlags: 0
