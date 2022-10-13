@@ -87,25 +87,20 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: 
   features:
-  - {fileID: 8111331889503645374}
   - {fileID: 3017465410047241157}
   - {fileID: -3639457910584932697}
-  - {fileID: 920341175228044063}
-  - {fileID: 2562226429334118219}
   - {fileID: 7341511333521318201}
   - {fileID: 395945327868078552}
   - {fileID: -6354976520320302171}
   - {fileID: -3632644072829054942}
-  - {fileID: 3758334345930699408}
   - {fileID: -9022521507369108574}
-  - {fileID: 1693881015169105812}
   - {fileID: 9148272206146255821}
   - {fileID: -7909124842597017699}
-  - {fileID: -2720274550077137184}
   - {fileID: -7386470194986720739}
   - {fileID: 4641573813368566202}
   m_renderMode: 1
   m_depthSubmissionMode: 2
+  versionChanged: 0
 --- !u!114 &-7909124842597017699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,16 +282,15 @@ MonoBehaviour:
   features:
   - {fileID: 5786179516949429421}
   - {fileID: 7761319276895670634}
-  - {fileID: 4953395288993201517}
   - {fileID: 5949097483191765197}
   - {fileID: -3088808841330529722}
-  - {fileID: 384244470977953313}
   - {fileID: 3569378723076839295}
   - {fileID: 7842198766866237484}
   - {fileID: -1989934862781208538}
   - {fileID: -8985970252069469515}
   m_renderMode: 1
   m_depthSubmissionMode: 0
+  versionChanged: 0
 --- !u!114 &-4565951740169382354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,6 +482,7 @@ MonoBehaviour:
   features: []
   m_renderMode: 1
   m_depthSubmissionMode: 0
+  versionChanged: 0
 --- !u!114 &-1989934862781208538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,6 +865,7 @@ MonoBehaviour:
   features: []
   m_renderMode: 1
   m_depthSubmissionMode: 0
+  versionChanged: 0
 --- !u!114 &5974007349267525468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,6 +881,7 @@ MonoBehaviour:
   features: []
   m_renderMode: 1
   m_depthSubmissionMode: 0
+  versionChanged: 0
 --- !u!114 &6443926207699947337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,22 +935,18 @@ MonoBehaviour:
   m_Name: WSA
   m_EditorClassIdentifier: 
   features:
-  - {fileID: -3784570966385705722}
   - {fileID: 8888462195333898173}
   - {fileID: 6445620568815816399}
-  - {fileID: -5192951653500755343}
-  - {fileID: -4565951740169382354}
   - {fileID: 4085808625324010190}
   - {fileID: 6443926207699947337}
   - {fileID: -7710902558707788684}
   - {fileID: 3182736141690664548}
-  - {fileID: -6359978018371965029}
-  - {fileID: 4036853111398351340}
   - {fileID: -3724447089370183592}
   - {fileID: -6753553037031264705}
   - {fileID: 8477378432470101578}
   m_renderMode: 1
   m_depthSubmissionMode: 1
+  versionChanged: 0
 --- !u!114 &7341511333521318201
 MonoBehaviour:
   m_ObjectHideFlags: 0
