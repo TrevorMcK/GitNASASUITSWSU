@@ -9,20 +9,18 @@ public class HUD : MonoBehaviour
     
     float nextTimePowerLevel = 0;
     float nextTimeOxygenInterval = 0;
-    float Mission1DisplayTime = 0;
     float oxygen = 100;
     float power = 100;
     public int Oxygen_Interval = 1;
     public int Power_Level_Interval = 1;
     
-    public int Mission1Interval = 1;
+  
     public GameObject OxygenTxt;
     
     public GameObject PowerTxt;
     public GameObject WarningOxygen;
     public GameObject WarningPower;
     public GameObject WelcomeMessage;
-    public GameObject Mission1;
     public float oxygenwartime = 0;
     public float powerwartime = 0;
 
@@ -107,23 +105,9 @@ public class HUD : MonoBehaviour
             yield return new WaitForSeconds(delay);
             WarningPower.SetActive(false);
         }
-        if (Time.time >= Mission1Interval)
-        {
-            Mission1DisplayTime += Mission1Interval;
-        }
-         if (Mission1DisplayTime == 15)
-            {
-                StartCoroutine(showMission1(3.0f));
-                IEnumerator showMission1(float delay)
-                {
-                    Mission1.SetActive(true);
-                    yield return new WaitForSeconds(delay);
-                    Mission1.SetActive(false);
-                }
-            }
 
-        }
-        
     }
+        
+}
 
 
