@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class NewOrigin : MonoBehaviour
 {
+    public float x = 6;
+    public float y = 1;
+    public float z = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        transform.position += new Vector3(0, 0, 0);
+        transform.position += new Vector3(6, 1, 0);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
