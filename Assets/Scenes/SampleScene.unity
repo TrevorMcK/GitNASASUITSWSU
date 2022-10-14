@@ -1134,7 +1134,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.94
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1191,14 +1191,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265601878}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 1.29, y: 9.4, z: 13.68}
+  m_LocalRotation: {x: 0.14793694, y: -0.025089601, z: 0.08046193, w: 0.98539895}
+  m_LocalPosition: {x: 197, y: 74, z: -325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.193, y: -1.538, z: 9.104}
 --- !u!1001 &309496951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2542,7 +2542,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513166363}
-  m_Material: {fileID: 13400000, guid: 91ef38658d550474d94738c306f37379, type: 2}
+  m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 38a593d76ea48bf4cb689607bc103553, type: 2}
   m_EnableTreeColliders: 1
@@ -2557,17 +2557,17 @@ Terrain:
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: 38a593d76ea48bf4cb689607bc103553, type: 2}
   m_TreeDistance: 5000
-  m_TreeBillboardDistance: 385
+  m_TreeBillboardDistance: 239
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 128.6
+  m_DetailObjectDistance: 65.2
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
-  m_DrawInstanced: 0
+  m_DrawInstanced: 1
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
@@ -9689,7 +9689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &221806289394689460
 GameObject:
   m_ObjectHideFlags: 0
